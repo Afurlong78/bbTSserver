@@ -19,7 +19,7 @@ dotenv.config();
 
 //connecting to DB
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () =>
   console.log("Connected to database.")
 );
 
