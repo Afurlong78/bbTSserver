@@ -3,7 +3,7 @@ const app: Express = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000/", credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 
 //import routes
 const authRoute = require("./routes/auth");
