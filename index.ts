@@ -28,7 +28,7 @@ app.get("/api", (req: Request, res: Response) => {
 
 //middleware for server
 app.use(express.json());
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors());
 
 //use routes
 app.use("/api/user", authRoute);
