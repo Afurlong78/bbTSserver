@@ -1,8 +1,9 @@
 import express, { Express, Request, Response } from "express";
 const app: Express = express();
-const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const cors = require("cors");
+app.use(cors({ origin: "*", credentials: true }));
 
 //import routes
 const authRoute = require("./routes/auth");
@@ -28,7 +29,6 @@ app.get("/api", (req: Request, res: Response) => {
 
 //middleware for server
 app.use(express.json());
-app.use(cors({ origin: "*", credentials: true }));
 
 //use routes
 app.use("/api/user", authRoute);
