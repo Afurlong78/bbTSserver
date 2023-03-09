@@ -34,7 +34,7 @@ router.post("/register", async (req: Request, res: Response) => {
     );
 
     // const url = `https://bb-server-production.up.railway.app/api/user/confirmation/${emailToken}`;
-    const url = `http://localhost:5000/api/confirmUser/confirmation/${emailToken}`;
+    const url = `https://bbtsserver-production.up.railway.app/api/confirmUser/confirmation/${emailToken}`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
