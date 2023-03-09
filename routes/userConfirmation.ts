@@ -12,7 +12,7 @@ router.get("/confirmation/:token", async (req: Request, res: Response) => {
       { _id: foundUser?._id },
       { $set: { activatedUser: true } }
     );
-    res.redirect("http://localhost:3000/login");
+    res.redirect("https://bb-ts.vercel.app/login");
   } catch (err) {
     console.log(err);
   }
